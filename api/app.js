@@ -25,12 +25,12 @@ app.use('/api', indexRouter);
 app.use('/api/users', usersRouter);
 
 
-  var distDir =   "../dist/notus-angular";
-  app.use(express.static(distDir));
-
-  app.get("*", function(req, res) {
-      res.sendFile(path.join(distDir, "index.html"))
-  });
+var distDir =   "../dist/notus-angular";
+app.use(express.static(distDir));
+console.log(path.join(distDir, "index.html"));
+app.get("*", function(req, res) {
+    res.sendFile(path.join(distDir, "index.html"))
+});
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
