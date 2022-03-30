@@ -25,9 +25,11 @@ app.use('/api', indexRouter);
 app.use('/api/users', usersRouter);
 
 
-var distDir =   "../dist/notus-angular";
+var test = __dirname.replace("\api","");
+
+var distDir =  test+ "/dist/notus-angular";
 app.use(express.static(distDir));
-console.log(path.join(distDir, "index.html"));
+
 app.get("*", function(req, res) {
     res.sendFile(path.join(distDir, "index.html"))
 });
