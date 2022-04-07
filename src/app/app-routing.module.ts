@@ -10,6 +10,7 @@ import { DashboardComponent } from "./views/admin/dashboard/dashboard.component"
 import { MapsComponent } from "./views/admin/maps/maps.component";
 import { SettingsComponent } from "./views/admin/settings/settings.component";
 import { TablesComponent } from "./views/admin/tables/tables.component";
+import { LoginNewComponent } from "./views/auth/login-new/login-new.component";
 
 // auth views
 import { LoginComponent } from "./views/auth/login/login.component";
@@ -47,7 +48,7 @@ const routes: Routes = [
   { path: "profile", component: ProfileComponent },
   { path: "landing", component: LandingComponent },
   { path: "index", component: IndexComponent },
-  { path: "**", redirectTo: "auth/login", pathMatch: "full" },
+  { path: "**", redirectTo: "/auth", pathMatch: "full" },
 ];
 
 @NgModule({

@@ -1,5 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -47,6 +50,11 @@ import { PagesDropdownComponent } from "./components/dropdowns/pages-dropdown/pa
 import { NotificationDropdownComponent } from "./components/dropdowns/notification-dropdown/notification-dropdown.component";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
+import { LoginNewComponent } from './views/auth/login-new/login-new.component';
+
+// formulaire
+//;
+
 
 @NgModule({
   declarations: [
@@ -84,8 +92,13 @@ import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user
     IndexComponent,
     LandingComponent,
     ProfileComponent,
+    LoginNewComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
