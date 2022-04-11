@@ -6,8 +6,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class FonctionService {
-  // url= "https://m1p9mean-jese.herokuapp.com/api";
-  url= "http://localhost:3000/api";
+  url= "https://m1p9mean-jese.herokuapp.com/api";
+  // url= "http://localhost:3000/api";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',
