@@ -6,8 +6,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class FonctionService {
-  url= "https://m1p9mean-jese.herokuapp.com/api";
-  // url= "http://localhost:3000/api";
+  // url= "https://m1p9mean-jese.herokuapp.com/api";
+  url= "http://localhost:3000/api";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',
@@ -31,8 +31,11 @@ export class FonctionService {
     return this.http.post(this.url+"/users/login",body,{headers : this.headers,responseType:"json"});
   }
 
-  findPlats(){
+  findResto(){
     return this.http.get(this.url+"/resto",{headers : this.headers,responseType:"json"});
+  }
+  findPlats(id:any){
+    return this.http.get(this.url+"/resto/"+id ,{headers : this.headers,responseType:"json"});
   }
 }
 
